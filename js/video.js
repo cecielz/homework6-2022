@@ -53,13 +53,15 @@ document.querySelector("#skip").addEventListener("click", function() {
 
 
 document.querySelector("#mute").addEventListener("click", function() {
-	if (video.volume > 0){
-		video.volume = 0
+	if (video.muted === false){
+		//video.volume = 0
+		video.muted = true;
 		//console.log("Muted"); 
 		document.getElementById("mute").innerHTML = "Unmute";
 	}
 	else{
-		video.volume = 1;
+		//video.volume = 1;
+		video.muted = false;
 		//console.log("Unmuted"); 
 		document.getElementById("mute").innerHTML = "Mute";
 	}
